@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hod-oi-TYX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--RIT News-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UNS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qN8-Ow-Wfv">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ii-Od-NBa">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home" id="0yv-yW-zTO">
+                                        <connections>
+                                            <action selector="goHome:" destination="BYZ-38-t0r" id="lkB-Dp-lvw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CPb-RF-3dU"/>
+                                    <barButtonItem title="Magazine" id="E3W-gv-Vue">
+                                        <connections>
+                                            <action selector="goMag:" destination="BYZ-38-t0r" id="xH6-20-Dc6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="OvY-NZ-5uc"/>
+                                    <barButtonItem title="Athenaeum" id="hQZ-oF-z7Q">
+                                        <connections>
+                                            <action selector="goAth:" destination="BYZ-38-t0r" id="7aa-Ow-FiE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aSK-OH-Ny9"/>
+                                    <barButtonItem title="Athletics" id="djL-lP-Thv">
+                                        <connections>
+                                            <action selector="goSports:" destination="BYZ-38-t0r" id="Wab-0d-tcc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2ii-Od-NBa" secondAttribute="trailing" id="3qI-WU-lDK"/>
+                            <constraint firstItem="2ii-Od-NBa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4Iq-PE-d5g"/>
+                            <constraint firstAttribute="centerX" secondItem="qN8-Ow-Wfv" secondAttribute="centerX" id="762-kA-uue"/>
+                            <constraint firstAttribute="centerY" secondItem="qN8-Ow-Wfv" secondAttribute="centerY" id="M7E-Hh-NVA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2ii-Od-NBa" secondAttribute="bottom" id="fc0-8F-Wmg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RIT News" id="mi4-ej-YcS">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Back" id="Qnf-bF-cxi">
+                            <connections>
+                                <action selector="goBack:" destination="BYZ-38-t0r" id="ixQ-T8-92f"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="QC4-0h-x7W">
+                            <connections>
+                                <action selector="goShare:" destination="BYZ-38-t0r" id="Pgu-IN-bIr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myActionBtn" destination="QC4-0h-x7W" id="0wK-3k-R0s"/>
+                        <outlet property="myActivityIndicator" destination="qN8-Ow-Wfv" id="OAK-pr-afZ"/>
+                        <outlet property="myBackBtn" destination="Qnf-bF-cxi" id="rM2-x2-9mC"/>
+                        <outlet property="myToolbar" destination="2ii-Od-NBa" id="t8J-JK-IJs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0hT-7x-wfx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hod-oi-TYX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oDc-Wj-7vj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oHO-rN-Tvg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQH-6O-G65" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="136"/>
+        </scene>
+    </scenes>
+</document>
