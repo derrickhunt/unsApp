@@ -29,7 +29,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView.navigationDelegate = self
         resizeWebView()
         
-        let url = NSURL(string: "http://www.rit.edu/news")
+        let url = NSURL(string: "http://www.rit.edu/news/")
         let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
         
@@ -85,10 +85,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     //MARK: - Toolbar Actions -
     @IBAction func goHome(sender: AnyObject) {
-        let url = NSURL(string: "http://www.rit.edu/news")
+        let url = NSURL(string: "http://www.rit.edu/news/")
         let request = NSURLRequest(URL: url!)
         
-        if (request != webView.URL){
+        if (request != webView.URL!){
             webView.loadRequest(request)
         }
     }
@@ -97,7 +97,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let url = NSURL(string: "http://www.rit.edu/news/magazine.php")
         let request = NSURLRequest(URL: url!)
         
-        if (request != webView.URL){
+        if (request != webView.URL!){
             webView.loadRequest(request)
         }
     }
@@ -106,7 +106,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let url = NSURL(string: "http://www.rit.edu/news/athenaeum.php")
         let request = NSURLRequest(URL: url!)
         
-        if (request != webView.URL){
+        if (request != webView.URL!){
             webView.loadRequest(request)
         }
     }
@@ -115,7 +115,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let url = NSURL(string: "http://www.ritathletics.com/")
         let request = NSURLRequest(URL: url!)
         
-        if (request != webView.URL){
+        if (request != webView.URL!){
             webView.loadRequest(request)
         }
         
@@ -140,16 +140,16 @@ class ViewController: UIViewController, WKNavigationDelegate {
         myActivityIndicator.stopAnimating()
         
         //update nav title
-        if (webView.URL! == "http://www.rit.edu/news") {
+        if (webView.URL! == NSURL(string: "http://www.rit.edu/news/")) {
             self.title = "University News"
         }
-        if (webView.URL! == "http://www.rit.edu/news/magazine.php") {
+        if (webView.URL! == NSURL(string: "http://www.rit.edu/news/magazine.php")) {
             self.title = "University Magazine"
         }
-        if (webView.URL! == "http://www.rit.edu/athenaeum.php") {
+        if (webView.URL! == NSURL(string: "http://www.rit.edu/news/athenaeum.php")) {
             self.title = "Athenaeum"
         }
-        if (webView.URL! == "http://www.ritathletics.com/") {
+        if (webView.URL! == NSURL(string: "http://www.ritathletics.com/")) {
             self.title = "Athletics"
         }
         
